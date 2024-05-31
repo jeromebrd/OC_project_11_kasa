@@ -9,3 +9,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  font-family: var(--font-family);
+}
+
+::placeholder {
+  font-family: var(--font-family);
+}
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+a.active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
