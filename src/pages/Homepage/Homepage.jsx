@@ -1,12 +1,20 @@
-import PageBanner from '../../components/PageBanner/PageBanner';
+import Banner from '../../components/Banner/Banner';
+import Card from '../../components/Card/Card';
 import homepageImg from '../../../public/images/homepage.png';
+import styles from './Homepage.module.scss';
+import { data } from '../../data/data';
+
 function Homepage() {
   return (
     <section className="home container height-100">
-      <PageBanner srcImg={homepageImg}>
-        Chez vous, partout et ailleurs
-      </PageBanner>
-      <main></main>
+      <Banner srcImg={homepageImg}>Chez vous, partout et ailleurs</Banner>
+      <main className={styles.main}>
+        {data.map((d) => (
+          <>
+            <Card title={d.title} />
+          </>
+        ))}
+      </main>
     </section>
   );
 }

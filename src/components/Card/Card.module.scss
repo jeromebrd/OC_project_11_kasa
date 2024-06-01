@@ -1,0 +1,20 @@
+.card {
+  background: var(--primary) var(--gradient-dark);
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+  &__title {
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.67px;
+    width: 50%;
+  }
+}
