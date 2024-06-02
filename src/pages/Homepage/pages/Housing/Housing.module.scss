@@ -1,0 +1,76 @@
+.housing {
+  min-height: 100vh;
+  &__header {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 51px;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  &__host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    p {
+      color: var(--primary);
+      text-align: right;
+      width: 93px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    img {
+      background-color: #c4c4c4;
+      width: 64px;
+      height: 64px;
+      border-radius: 100%;
+    }
+  }
+  &__tags__rating {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul.ctn__tags {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    ul.ctn__stars {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__tag {
+    min-width: 115px;
+    padding: 10px 10px;
+    color: white;
+    background: var(--primary);
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__rate {
+    margin-left: 5px;
+  }
+  .ctn__collapse {
+    max-width: 100%;
+    display: flex;
+    gap: 76px;
+    padding-bottom: 50px;
+  }
+}

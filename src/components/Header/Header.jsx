@@ -12,13 +12,7 @@ export default function Header() {
           <li>
             <NavLink
               to="/"
-              className={({ isActive, isPending, isTransitioning }) =>
-                [
-                  isPending ? 'pending' : '',
-                  isActive ? 'active' : '',
-                  isTransitioning ? 'transitioning' : '',
-                ].join(' ')
-              }
+              className={({ isActive }) => (isActive ? styles.active : '')}
             >
               Accueil
             </NavLink>
@@ -26,13 +20,7 @@ export default function Header() {
           <li>
             <NavLink
               to="/about"
-              className={({ isActive, isPending, isTransitioning }) =>
-                [
-                  isPending ? 'pending' : '',
-                  isActive ? 'active' : '',
-                  isTransitioning ? 'transitioning' : '',
-                ].join(' ')
-              }
+              className={({ isActive }) => (isActive ? styles.active : '')}
             >
               À Propos
             </NavLink>

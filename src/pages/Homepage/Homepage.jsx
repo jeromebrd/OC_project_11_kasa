@@ -11,7 +11,7 @@ function Homepage() {
       <main className={styles.main}>
         {data.map((d) => (
           <>
-            <Card title={d.title} />
+            <Card title={d.title} id={d.id} />
           </>
         ))}
       </main>

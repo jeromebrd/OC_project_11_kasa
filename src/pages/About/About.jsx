@@ -9,10 +9,10 @@ function About() {
       <Banner srcImg={aboutImg} />
       <main className={styles.main}>
         {}
-        <Collapse title={'Fiabilité'} />
-        <Collapse title={'Respect'} />
-        <Collapse title={'Service'} />
-        <Collapse title={'Sécurité'} />
+        <Collapse title={'Fiabilité'} className="bradius__5" />
+        <Collapse title={'Respect'} className="bradius__5" />
+        <Collapse title={'Service'} className="bradius__5" />
+        <Collapse title={'Sécurité'} className="bradius__5" />
       </main>
     </section>
   );

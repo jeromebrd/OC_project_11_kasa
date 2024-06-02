@@ -1,10 +1,9 @@
 .collapse {
-  min-width: 100%;
+  width: 100%;
   cursor: pointer;
 
   &__bar {
     padding: 10px 20px 10px 15px;
-    border-radius: 5px;
     background: var(--primary);
     display: flex;
     justify-content: space-between;
