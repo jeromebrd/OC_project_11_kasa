@@ -27,7 +27,7 @@ function Housing() {
     }
   });
   const {
-    cover,
+    // cover,
     title,
     location,
     host,
@@ -41,7 +41,7 @@ function Housing() {
 
   return (
     <section className={`${styles.housing} container`}>
-      <Slideshow />
+      <Slideshow slides={pictures} />
       {dataHousing && (
         <>
           <div className={styles.housing__header}>
