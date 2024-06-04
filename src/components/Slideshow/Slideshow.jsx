@@ -20,26 +20,30 @@ function Slideshow({ slides }) {
   return (
     <div className={styles.slideshow}>
       <div>
-        <input
-          type="image"
-          className={styles.btn__back}
-          role="button"
-          src={arrowLeft}
-          onClick={goToPrevious}
-        />
+        {slides.length > 1 && (
+          <>
+            <input
+              type="image"
+              className={styles.btn__back}
+              role="button"
+              src={arrowLeft}
+              onClick={goToPrevious}
+            />
+            <input
+              type="image"
+              className={styles.btn__next}
+              role="button"
+              src={arrowRight}
+              onClick={goToNext}
+            />
+            <span className={styles.counter}>{`${currentIndex + 1}/${
+              slides.length
+            }`}</span>
+          </>
+        )}
         <div className={styles.ctn__imgs}>
           <img src={slides[currentIndex]} alt="pictures" />
         </div>
-        <input
-          type="image"
-          className={styles.btn__next}
-          role="button"
-          src={arrowRight}
-          onClick={goToNext}
-        />
-        <span className={styles.counter}>{`${currentIndex + 1}/${
-          slides.length
-        }`}</span>
       </div>
     </div>
   );

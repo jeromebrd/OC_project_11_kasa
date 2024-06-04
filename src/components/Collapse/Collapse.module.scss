@@ -3,11 +3,13 @@
   cursor: pointer;
 
   &__bar {
+    position: relative;
     padding: 10px 20px 10px 15px;
     background: var(--primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
   }
   &__title {
     color: white;
@@ -15,20 +17,31 @@
     font-size: 24px;
   }
   &__arrows {
-    display: none;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
   }
   &__arrows.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: rotate(-180deg);
   }
+
   &__menu {
+    position: relative;
     width: 100%;
-    background: #f6f6f673;
     padding: 20px 20px 20px 20px;
+    background: hsla(0, 0%, 96%, 0.451);
     border-radius: 10px 10px 5px 5px;
     font-size: 18px;
     font-weight: 400;
     line-height: 25.67px;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(-40px);
   }
+}
+
+.activ {
+  opacity: 1;
+  height: 100%;
+  transform: translateY(0px);
+  z-index: 0;
 }
