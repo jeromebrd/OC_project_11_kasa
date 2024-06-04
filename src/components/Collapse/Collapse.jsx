@@ -11,7 +11,10 @@ function Collapse({ title, data, className }) {
   const dataArr = typeof data === 'object' && data;
 
   return (
-    <div className={styles.collapse} onClick={handleClick}>
+    <div
+      className={`${styles.collapse} ${isOpen ? '' : styles.height50}`}
+      onClick={handleClick}
+    >
       <div className={`${styles.collapse__bar} ${className}`}>
         <p className={styles.collapse__title}>{title}</p>
         <div

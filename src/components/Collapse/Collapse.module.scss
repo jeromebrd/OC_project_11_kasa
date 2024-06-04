@@ -1,7 +1,11 @@
 .collapse {
   width: 100%;
   cursor: pointer;
-
+  height: 100%;
+  transition: height 0.2s ease-in-out;
+  &.height50 {
+    height: 50px;
+  }
   &__bar {
     position: relative;
     padding: 10px 20px 10px 15px;
