@@ -1,6 +1,11 @@
+@use './mixins' as mixin;
+
 .container {
   max-width: 80%;
   margin: 0 auto;
+  @include mixin.sm {
+    max-width: 90%;
+  }
 }
 .height-100 {
   min-height: 100vh;

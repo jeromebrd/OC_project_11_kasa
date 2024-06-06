@@ -1,4 +1,6 @@
-.main {
+@use '../../assets/styles/mixins' as mixin;
+
+*.main {
   background: #f6f6f6;
   border-radius: 25px;
   min-height: 829px;
@@ -9,4 +11,10 @@
   justify-content: center;
   justify-items: center;
   row-gap: 50px;
+  @include mixin.sm {
+    background: transparent;
+    row-gap: 20px;
+    padding: 20px 0;
+    margin: 0;
+  }
 }

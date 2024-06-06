@@ -1,3 +1,5 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .footer {
   padding: 45px 0;
   background: var(--dark);
@@ -6,6 +8,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
   &__img {
     width: 122px;
     height: auto;
@@ -15,5 +18,10 @@
     color: white;
     font-weight: 500;
     font-size: 1.5rem;
+    @include mixin.sm {
+      padding-top: 10px;
+      font-size: 12px;
+      width: 130px;
+    }
   }
 }

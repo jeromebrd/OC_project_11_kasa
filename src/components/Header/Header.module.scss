@@ -1,5 +1,9 @@
+@use '../../assets/styles/mixins' as mixin;
 .header {
   padding: 45px 0 50px;
+  @include mixin.sm {
+    padding: 20px 0 25px;
+  }
   nav {
     display: flex;
     justify-content: space-between;
@@ -13,6 +17,11 @@
         padding-left: 3.6rem;
         font-weight: 500;
         font-size: 1.5rem;
+        @include mixin.sm {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          padding-left: 26px;
+        }
       }
       .active {
         text-decoration: underline;
@@ -25,4 +34,7 @@
 .logo {
   height: auto;
   width: 210px;
+  @include mixin.sm {
+    width: 145px;
+  }
 }

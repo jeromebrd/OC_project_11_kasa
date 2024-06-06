@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function Card({ title, id, cover }) {
   console.log(cover);
   const styleBgCoverImg = {
-    backgroundImage: `var(--gradient-dark), url(${cover})`,
+    backgroundImage: `var(--gradient-dark), url('${cover}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

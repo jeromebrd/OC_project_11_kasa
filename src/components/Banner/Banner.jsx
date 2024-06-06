@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import styles from './Banner.module.scss';
 function Banner({ srcImg, children }) {
+  const styleBgCoverImg = {
+    backgroundImage: `url(${srcImg})`,
+  };
   return (
-    <div className={styles.banner}>
-      <img src={srcImg} alt="image" />
-      <div className={styles.banner__mask}>
-        {children && <h1>{children}</h1>}
-      </div>
+    <div className={styles.banner} style={styleBgCoverImg}>
+      {children && <h1>{children}</h1>}
     </div>
   );
 }

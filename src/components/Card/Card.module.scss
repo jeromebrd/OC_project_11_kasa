@@ -1,3 +1,5 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .card {
   background: var(--primary) var(--gradient-dark);
   width: 340px;
@@ -6,6 +8,10 @@
   display: flex;
   align-items: flex-end;
   max-width: 100%;
+  @include mixin.sm {
+    width: 335px;
+    height: 255px;
+  }
 
   &:hover {
     cursor: pointer;
