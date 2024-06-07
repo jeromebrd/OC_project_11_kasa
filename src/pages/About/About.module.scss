@@ -1,3 +1,5 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,4 +7,9 @@
   padding: 40px 0;
   max-width: 80%;
   margin: 0 auto;
+  @include mixin.sm {
+    max-width: 100%;
+    row-gap: 20px;
+    padding: 40px 0;
+  }
 }
