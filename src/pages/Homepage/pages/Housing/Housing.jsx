@@ -48,48 +48,49 @@ function Housing() {
             <div className={styles.housing__text}>
               <h1>{title}</h1>
               <h2>{location}</h2>
-            </div>
-            <div className={styles.housing__host}>
-              <p>{host.name}</p>
-              <img src={host.picture} />
-            </div>
-          </div>
-          <div>
-            <div className={styles.housing__tags__rating}>
               <ul className={styles.ctn__tags}>
                 {tags.map((tag, i) => (
                   <Tag tag={tag} key={i} />
                 ))}
               </ul>
-              <ul className={styles.ctn__stars}>
-                {rating >= 1 ? (
-                  <Star color={'primary'} />
-                ) : (
-                  <Star color={'light-grey'} />
-                )}
-                {rating >= 2 ? (
-                  <Star color={'primary'} />
-                ) : (
-                  <Star color={'light-grey'} />
-                )}
-                {rating >= 3 ? (
-                  <Star color={'primary'} />
-                ) : (
-                  <Star color={'light-grey'} />
-                )}
-                {rating >= 4 ? (
-                  <Star color={'primary'} />
-                ) : (
-                  <Star color={'light-grey'} />
-                )}
-                {rating == 5 ? (
-                  <Star color={'primary'} />
-                ) : (
-                  <Star color={'light-grey'} />
-                )}
-              </ul>
+            </div>
+            <div className={styles.housing__host}>
+              <div className={styles.profil}>
+                <p>{host.name}</p>
+                <img src={host.picture} />
+              </div>
+              <div className={styles.housing__rating}>
+                <ul className={styles.ctn__stars}>
+                  {rating >= 1 ? (
+                    <Star color={'primary'} />
+                  ) : (
+                    <Star color={'light-grey'} />
+                  )}
+                  {rating >= 2 ? (
+                    <Star color={'primary'} />
+                  ) : (
+                    <Star color={'light-grey'} />
+                  )}
+                  {rating >= 3 ? (
+                    <Star color={'primary'} />
+                  ) : (
+                    <Star color={'light-grey'} />
+                  )}
+                  {rating >= 4 ? (
+                    <Star color={'primary'} />
+                  ) : (
+                    <Star color={'light-grey'} />
+                  )}
+                  {rating == 5 ? (
+                    <Star color={'primary'} />
+                  ) : (
+                    <Star color={'light-grey'} />
+                  )}
+                </ul>
+              </div>
             </div>
           </div>
+          <div></div>
           <div className={styles.ctn__collapse}>
             <Collapse
               title={'Description'}

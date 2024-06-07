@@ -1,3 +1,5 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .collapse {
   width: 100%;
   cursor: pointer;
@@ -14,15 +16,23 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    @include mixin.sm {
+    }
   }
   &__title {
     color: white;
     font-weight: 700;
     font-size: 24px;
+    @include mixin.sm {
+      font-size: 13px;
+    }
   }
   &__arrows {
     transform: rotate(0deg);
     transition: transform 0.5s ease-in-out;
+    @include mixin.sm {
+      width: 16px;
+    }
   }
   &__arrows.active {
     transform: rotate(-180deg);
@@ -40,6 +50,15 @@
     transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
     opacity: 0;
     transform: translateY(-40px);
+    @include mixin.sm {
+      font-size: 12px;
+      ul {
+        li {
+          line-height: 17.11px;
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
 

@@ -1,3 +1,5 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .slideshow {
   width: 100%;
   height: 415px;
@@ -13,6 +15,13 @@
       object-fit: cover;
     }
   }
+  @include mixin.sm {
+    height: 255px;
+    input {
+      width: 13px;
+      height: 21px;
+    }
+  }
 }
 .btn__back,
 .btn__next {
@@ -23,9 +32,15 @@
 }
 .btn__back {
   left: 23px;
+  @include mixin.sm {
+    left: 6px;
+  }
 }
 .btn__next {
   right: 23px;
+  @include mixin.sm {
+    right: 6px;
+  }
 }
 .counter {
   position: absolute;
@@ -36,4 +51,7 @@
   font-weight: 500;
   font-size: 18px;
   z-index: 10;
+  @include mixin.sm {
+    display: none;
+  }
 }
