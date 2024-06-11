@@ -37,7 +37,6 @@ function Housing() {
     equipments,
     pictures,
   } = dataHousing;
-  console.log(dataHousing);
 
   return (
     <section className={`${styles.housing} container`}>
