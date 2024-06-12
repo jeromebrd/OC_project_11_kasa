@@ -10,9 +10,7 @@ function Homepage() {
       <Banner srcImg={homepageImg}>Chez vous, partout et ailleurs</Banner>
       <main className={styles.main}>
         {data.map((d) => (
-          <>
-            <Card title={d.title} id={d.id} cover={d.cover} />
-          </>
+          <Card key={d.id} title={d.title} id={d.id} cover={d.cover} />
         ))}
       </main>
     </section>
