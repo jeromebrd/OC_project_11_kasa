@@ -12,7 +12,7 @@ export default function Header() {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => isActive && styles.active}
             >
               Accueil
             </NavLink>
